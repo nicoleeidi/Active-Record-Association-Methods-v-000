@@ -12,7 +12,7 @@ class Genre < ActiveRecord::Base
     # return the number of artists associated with the genre
   end
 
-  def all_artist_names
+  def all_artist_names #no map or each method
     artist_names= []
     self.artists each do |artist|
       artist_names << artist.name
